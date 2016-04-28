@@ -1,0 +1,82 @@
+body{
+    background-color: #F8F7F4;
+    color: #424242
+}
+.main-container{
+    margin:0 10%;
+    padding: 0 15px;
+}
+.header-container{
+    padding-left:15px;
+    margin-bottom:20px;
+    padding-right:15px;
+}
+.header-detail{
+    font-size: 20px;
+    line-height: 1.42857143;
+}
+.logo > a > img{
+    margin-bottom:12px;
+    margin-top:28px;"
+}
+.block{
+    border-radius: 10px;
+    height: 212px;
+    padding: 25px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+#main-box {
+    display: block;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #424242;
+    padding: 34px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.row > div {
+    padding: 7px;
+}
+.counter{
+    font-size: 27px;
+    font-weight: bold;
+    display: block;
+}
+.units{
+    font-size: 22px;
+    font-weight: bold;
+}
+.head {
+    font-size: 18px;
+}
+.font62{
+    font-size: 62px;
+}
+.font20{
+    font-size: 20px;
+}
+.footer-content{
+    padding-left:15px;
+    margin-bottom:20px;
+    padding-right:15px;
+    font-size: 20px;
+}
+#collapse-content{
+    padding: 0;
+}
+#collapse-area{
+    font-size: 14px;
+}
+.img_small img {
+    height: 70px;
+    margin: -10px;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .main-container{
+        margin:0;
+        padding: 0 15px;
+    }
+}

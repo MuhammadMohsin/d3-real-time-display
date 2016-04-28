@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Environment Statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/d3.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="libs/bootstrap-3.3.6/css/bootstrap.min.css">
+    <script src="libs/jquery-2.2.3/jquery.js" type="text/javascript"></script>
+    <script src="libs/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" type="text/javascript"></script>
+
+</head>
+<body onload="loadDataFromCSV()">
+<div class="main-container">
+    <div class="row header-container">
+        <div class="col-xs-12 col-sm-12 col-sm-8 col-lg-8">
+            <div class="logo"><a href="http://www.kaufda.de/"><img src="assets/logos/kaufDA_logo.png"></a></div>
+        </div>
+        <div class="col-xs-12">
+            <h1 class="font62">Environmental gasses emission statistics</h1>
+            <p class="header-detail">Did you know? over <strong>39,478,000 </strong>thousand tons of
+                <strong>carbon dioxide</strong> emissions is forecasted for the year
+                <strong>2016</strong>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="container-fluid block-area" id="main-box">
+        <div class="row" id="grids-container">
+
+        </div>
+    </div>
+
+    <div class="row footer-content">
+        <div class="text-bottom col-xs-12 col-sm-12 col-sm-12 col-lg-12">
+
+            <p>Lorem ipsum dolor sit amet, quisque nunc soluta quam, velit dolor erat, tortor est arcu augue odio, sollicitudin eget integer.
+                <a class="footer-link" href="http://www.retale.com/info/retail-in-real-time/" target="_blank"><i>Retail in Real-Time</i></a>,
+                Laoreet ad ullamcorper lectus, id eget nec, vulputate vel parturient mus, donec suspendisse at, pharetra sed sed pellentesque porta tempus.</p>
+
+            <p>Neque ut taciti ac id pellentesque, condimentum maecenas eu pulvinar, recusandae per urna sodales, non laoreet non massa commodo urna,
+                morbi elementum tortor pede at <i>Quisque dictum Laborum vitae felis cras pellentesque.</i> Tellus imperdiet enim et morbi est, neque bibendum.</p>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-sm-12 col-lg-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel-content">
+                    <div class="panel-heading" role="tab" id="collapse-content">
+                        <h4 class="panel-title">
+                            <a class="collapsed font20" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-area" aria-expanded="false" aria-controls="collapseThree">
+                                Quellen:
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-area" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-content">
+                        <div class="panel-body">
+                            <p>(1) <strong>Allgemeine Umsatzzahlen:</strong> GfK, Handelsverband Deutschland (Prognose für 2014); Aufgerufen unter http://www.gfk.com/de/news-und-events/presse/pressemitteilungen/Seiten/Einzelhandelsumsatz-2014.aspx; http://de.statista.com/statistik/daten/studie/164550/umfrage/prognostizierter-umsatz-auf-dem-buchmarkt-in-deutschland-seit-2005/</p>
+                            <p>(2) <strong>Buchmarkt:</strong> PwC; Aufgerufen unter http://de.statista.com/statistik/daten/studie/164550/umfrage/prognostizierter-umsatz-auf-dem-buchmarkt-in-deutschland-seit-2005/</p>
+                            <p>(3) <strong>E-Books:</strong> PwC; Aufgerufen unter http://de.statista.com/statistik/daten/studie/180607/umfrage/umsatz-mit-ebooks-auf-dem-deutschen-belletristikmarkt-seit-2009/</p>
+                            <p>(4) <strong>DM-Drogerie Markt:</strong> dm-drogerie markt, Aufgerufen unter http://www.dm.de/de_homepage/unternehmen/zahlen-fakten/unternehmenszahlen/ und http://www.dm.de/de_homepage/presse/jahrespressekonferenz-2013/343174/rb-dm-jahrespressekonferenz-2013-uebersicht.html ; Apotheke AdHoc; Aufgerufen unter http://www.dm.de/de_homepage/unternehmen/zahlen-fakten/unternehmenszahlen/, http://www.apotheke-adhoc.de/nachrichten/nachricht-detail/dm-schlecker-und-klopapier/</p>
+                            <p>(5) <strong>McDonalds:</strong> McDonalds, Abendblatt; Aufgerufen unter http://de.statista.com/statistik/daten/studie/36365/umfrage/umsatz-von-mc-donalds-deutschland-seit-2006/
+                                , http://de.statista.com/statistik/daten/studie/244545/umfrage/anzahl-der-gaeste-pro-tag-von-mcdonalds/, http://www.abendblatt.de/wirtschaft/article2032645/McDonalds-und-seine-sechs-Millionen-Big-Macs-im-Monat.html</p>
+                            <p>(6) <strong>Edeka Gruppe:</strong> Edeka; Aufgerufen unter http://de.statista.com/statistik/daten/studie/72803/umfrage/edeka-gruppe-umsatz-in-deutschland-zeitreihe/</p>
+                            <p>(7) <strong>Amazon Deutschland:</strong> Spiegel online; Aufgerufen unter http://www.spiegel.de/netzwelt/web/amazon-kontrolliert-ein-viertel-des-deutschen-online-handels-a-950821.html</p>
+                            <p>(8) <strong>Milchverbrauch:</strong> Milchindustrie; Aufgerufen unter http://www.milchindustrie.de/marktdaten/verbrauch-nachfrage/</p>
+                            <p>(9) <strong>Bierverbrauch:</strong> Statistisches Bundesamt; Aufgerufen unter http://de.statista.com/statistik/daten/studie/3406/umfrage/bierabsatz-in-deutschland-seit-dem-jahr-1999//</p>
+                            <p>(10) <strong>Automobile:</strong> Statistisches Bundesamt, DIW Berlin, KBA, Brennstoffspiegel; Aufgerufen unter http://de.statista.com/statistik/daten/studie/2984/umfrage/entwicklung-der-fahrleistung-von-pkw/, http://www.brennstoffspiegel.de/energiemarkt.html?newsid=14312&amp;title=Tankstelle%3A+Aral+bleibt+Primus, http://de.statista.com/statistik/daten/studie/166470/umfrage/monatliche-ausgaben-privater-haushalte-fuer-kraftstoffe-seit-1990/</p>
+                            <p>(11) <strong>Nahrungsmittel:</strong> BMEL, BLE; Aufgerufen unter http://de.statista.com/statistik/daten/studie/6300/umfrage/pro-kopf-verbrauch-von-obst-in-deutschland/, http://de.statista.com/statistik/daten/studie/176731/umfrage/pro-kopf-verbrauch-von-gemuese-in-deutschland/, http://de.statista.com/statistik/daten/studie/36573/umfrage/pro-kopf-verbrauch-von-fleisch-in-deutschland-seit-2000/</p>
+                            <p>(12) <strong>Aldi Nord:</strong> TradeDimensions; Aufgerufen unter http://de.statista.com/statistik/daten/studie/38284/umfrage/bruttoumsatz-der-unternehmen-der-aldi-gruppe/</p>
+                            <p>(13) <strong>Aldi Süd:</strong> TradeDimensions; Aufgerufen unter http://de.statista.com/statistik/daten/studie/38284/umfrage/bruttoumsatz-der-unternehmen-der-aldi-gruppe/</p>
+                            <p>(14) <strong>Spenden:</strong> Fundraiser Magazin 06/13; Aufgerufen unter http://de.wikipedia.org/wiki/Spende</p>
+                            <p>(15) <strong>Glücksspiel:</strong> DHS, DIW Berlin, Lotto GmbH (Archiv- und Informationsstelle der deutschen Lotto- und Tott-Unternehmen); Aufgerufen unter http://de.statista.com/statistik/daten/studie/5417/umfrage/umsaetze-auf-dem-gluecksspiel-markt-seit-2005/</p>
+                            <p>(16) <strong>Fast Food:</strong> FR online, Currywurst Museum, Berliner Zeitung; Aufgerufen unter http://www.fr-online.de/panorama/interview-mit-dem-erfinder-des-doener--echt-nur-mit-zwiebeln-und-salat-,1472782,10892314.html, http://currywurstmuseum.com/presse/, http://www.berliner-zeitung.de/archiv/tiefkuehlpizza-ist-besser-als-ihr-ruf---experten-haben-sie-probiert-der-pizza-test,10810590,10288594.html</p>
+                            <p>(17) <strong>Heimtierbedarf:</strong> ZZF; Aufgerufen unter http://de.statista.com/statistik/daten/studie/261958/umfrage/marktvolumen-fuer-heimtierbedarf-heimtierbedarf-in-deutschland/</p>
+                            <p>(18) <strong>Babynahrung:</strong> Nielsen; Aufgerufen unter http://de.statista.com/statistik/daten/studie/297716/umfrage/umsatz-mit-babynahrung-und-pflegeartikeln-in-deutschland/</p>
+                            <p>(19) <strong>Kaffetassen:</strong> WELT online; Aufgerufen unter http://www.welt.de/wirtschaft/article116668377/Pro-Sekunde-trinken-Deutsche-2315-Tassen-Kaffee.html</p>
+                            <p>(20) <strong>Zigaretten:</strong> Statistisches Bundesamt; Aufgerufen unter http://de.statista.com/statistik/daten/studie/6209/umfrage/entwicklung-des-zigarettenkonsums-seit-1964/</p>
+                            <br>
+                            <p>Anmerkung: Sämtliche der in der obigen Animation verwendeten Zahlen und Daten basieren auf hochgerechneten Durschnittswerten und z.T. Schätzungen und erheben keinen Anspruch auf Genauigkeit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <p class="footer text-center">
+                <br>
+                © 2008 - 2014 kaufDA.de - Ein Portal der Bonial International GmbH<br>
+                <a href="http://www.kaufda.de/Impressum" class="footer-link">
+                    Impressum
+                </a> |
+                <a style="color: #1fa4d2" href="http://www.kaufda.de/corporate/presse/">
+                    Presseportal
+                </a> |
+                <a href="http://www.kaufda.de/Datenschutz#OnlineWerbung" class="footer-link">
+                    Nutzungsbasierte Online Werbung
+                </a> |
+
+                <a href="http://www.kaufda.de/AGB" class="footer-link">
+                    AGB
+                </a> |
+                <a href="http://www.kaufda.de/Datenschutz" class="footer-link">
+                    Datenschutz
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
